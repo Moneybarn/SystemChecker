@@ -7,11 +7,17 @@
   "licenseUrl": "",
 
   "frameworks": {
-    "dnx451": { }
+    "netcoreapp1.0": {
+      "imports": "dnxcore50"
+    }
   },
 
   "dependencies": {
-    "MailKit" :  "1.2.21", 
+    "Microsoft.NETCore.App": {
+      "type": "platform",
+      "version": "1.0.1"
+    },
+    "MailKit": "1.10.1",
     "SystemChecker.Model": "1.0.0-*"
   }
 }

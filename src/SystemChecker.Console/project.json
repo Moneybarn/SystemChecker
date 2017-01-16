@@ -6,14 +6,18 @@
   "projectUrl": "",
   "licenseUrl": "",
 
-  "compilationOptions": {
+  "buildOptions": {
     "emitEntryPoint": true
   },
 
   "dependencies": {
+    "Microsoft.NETCore.App": {
+      "type": "platform",
+      "version": "1.0.1"
+    },
     "SystemChecker.Model": "1.0.0-*",
     "Newtonsoft.Json": "8.0.2",
-    "Quartz": "2.3.3",
+    "Quartz": "3.0.0-alpha2",
     "Microsoft.Extensions.Configuration": "1.0.0-rc1-final",
     "Microsoft.Extensions.Configuration.Json": "1.0.0-rc1-final",
     "Microsoft.Extensions.Configuration.CommandLine": "1.0.0-rc1-final",
@@ -29,6 +33,8 @@
   },
 
   "frameworks": {
-    "dnx451": { }
+    "netcoreapp1.0": {
+      "imports": "dnxcore50"
+    }
   }
 }

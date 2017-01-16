@@ -4,6 +4,7 @@ using Quartz.Impl;
 using SystemChecker.Model.Scheduling;
 using Quartz.Impl.Matchers;
 using System.Text;
+using System.Threading.Tasks;
 using SystemChecker.Model.Data.Interfaces;
 using Microsoft.Extensions.Logging;
 
@@ -25,7 +26,7 @@ namespace SystemChecker.Model
         {
             // setup the scheduling
             ISchedulerFactory schedFact = new StdSchedulerFactory();
-            sched = schedFact.GetScheduler();
+            sched = schedFact.GetScheduler().Result;
 
             // handle job failures
             sched.ListenerManager.AddJobListener(new GlobalJobListener(logger), GroupMatcher<JobKey>.AnyGroup());
@@ -51,14 +52,12 @@ namespace SystemChecker.Model
                     .Build();
 
             sched.ScheduleJob(updatejob, updateTrigger);
-
             sched.Start();
             logger.LogInformation($"Scheduler started");
 
+            // trigger the schedule updater now to do the initial load of the work we're going to be running
             sched.TriggerJob(updatejob.Key);
-
             
-
             // todo: Add a signalR server which the web ui can connect to to request immediate re-runs of tests/ be notified of recent results
             //http://stackoverflow.com/questions/11140164/signalr-console-app-example
         }
@@ -81,17 +80,17 @@ namespace SystemChecker.Model
             get { return "MainJobListener"; }
         }
 
-        public void JobToBeExecuted(IJobExecutionContext context)
+        public Task JobToBeExecuted(IJobExecutionContext context)
         {
-            return;
+            return null;
         }
 
-        public void JobExecutionVetoed(IJobExecutionContext context)
+        public Task JobExecutionVetoed(IJobExecutionContext context)
         {
-            return;
+            return null;
         }
 
-        public void JobWasExecuted(IJobExecutionContext context, JobExecutionException jobException)
+        public Task JobWasExecuted(IJobExecutionContext context, JobExecutionException jobException)
         {
             if (jobException != null)
             {
@@ -102,6 +101,8 @@ namespace SystemChecker.Model
             {
                 logger.LogInformation($"Job Executed : {context.JobDetail.Description}");
             }
+
+            return null;
         }
     }
 }

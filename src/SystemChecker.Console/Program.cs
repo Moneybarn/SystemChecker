@@ -42,6 +42,8 @@ namespace SystemChecker.Console
                 var svc = new SystemCheckerRunner(repoFactory, logger);
                 svc.Start();
 
+                // at this point do we also add a tcp listener which allows us to trigger tests immediately?
+
                 while (!_killSwitch)
                 {
                     Thread.Sleep(1000);

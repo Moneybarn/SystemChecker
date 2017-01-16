@@ -6,18 +6,16 @@
   },
 
   "dependencies": {
+    "Microsoft.NETCore.App": "1.1.0",
     "SystemChecker.Model": "1.0.0-*",
     "Microsoft.AspNet.IISPlatformHandler": "1.0.0-rc1-final",
     "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final",
     "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
     "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final",
     "Microsoft.Framework.ConfigurationModel": "1.0.0-beta4",
-    "Microsoft.Framework.Configuration.Json": "1.0.0-beta5",
-    "Microsoft.Extensions.Configuration": "1.0.0-rc1-final",
-    "Microsoft.AspNet.Mvc.WebApiCompatShim": "6.0.0-rc1-final",
-    "Microsoft.Net.Http": "2.2.22",
-    "elmah": "1.2.2",
-    "Quartz": "2.3.3"
+    "Microsoft.Framework.Configuration.Json": "1.0.0-beta8",
+    "Microsoft.Extensions.Configuration": "1.1.0",
+    "Quartz": "3.0.0-alpha2"
   },
 
   "commands": {
@@ -25,7 +23,9 @@
   },
 
   "frameworks": {
-    "dnx451": { }
+    "netcoreapp1.0": {
+      "imports": "dnxcore50"
+    }
   },
 
   "exclude": [
