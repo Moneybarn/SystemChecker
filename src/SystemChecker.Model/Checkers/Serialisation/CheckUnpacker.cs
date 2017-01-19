@@ -17,7 +17,7 @@ namespace SystemChecker.Model.Checkers.Serialisation
 
             var type = Type.GetType($"{checkType.CheckTypeName}, {checkType.CheckAssembly}");
             
-            var checker = (ISystemCheck)Activator.CreateInstance(type).Unwrap();
+            var checker = (ISystemCheck)Activator.CreateInstance(type);
 
             checker.CheckToPerformId = check.CheckId;
 

@@ -29,9 +29,8 @@ namespace SystemChecker.TestBed
 
                 var connectionString = config[$"Data:DefaultConnection:ConnectionString-{config["COMPUTERNAME"]}"];
 
-                
+
                 ILoggerFactory factory = new LoggerFactory();
-                factory.MinimumLevel = LogLevel.Debug;
                 factory.AddConsole(LogLevel.Debug);
                 var logger = factory.CreateLogger("SystemCheckerRunner");
 
