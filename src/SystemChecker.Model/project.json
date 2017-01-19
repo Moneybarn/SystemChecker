@@ -1,27 +1,30 @@
 {
-  "version": "1.0.0-*",
-  "description": "SystemChecker.Model Class Library",
   "authors": [ "Shaw Young" ],
-  "tags": [ "" ],
-  "projectUrl": "",
-  "licenseUrl": "",
+  "dependencies": {
+    "Microsoft.NETCore.App": "1.1.0",
+    "Dapper": "1.50.2",
+    "Newtonsoft.Json": "9.0.1",
+    "Quartz": "3.0.0-alpha2",
+    "System.Net.Http": "4.3.0",
+    "System.Net.Requests": "4.3.0",
+    "System.Net.NetworkInformation": "4.3.0",
+    "System.Net.Ping": "4.3.0",
+    "System.Collections": "4.3.0",
+    "Microsoft.Extensions.Configuration": "1.1.0",
+    "Microsoft.Extensions.Configuration.CommandLine": "1.1.0",
+    "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.1.0",
+    "Microsoft.Extensions.Configuration.Json": "1.1.0",
+    "Microsoft.Extensions.Logging.Abstractions": "1.1.0",
+    "System.Data.Common": "4.3.0"
+  },
+  "description": "SystemChecker.Model Class Library",
   "frameworks": {
     "netcoreapp1.0": {
       "imports": "dnxcore50"
     }
   },
-  "dependencies": {
-    "Microsoft.NETCore.App": {
-      "type": "platform",
-      "version": "1.0.1"
-    },
-    "Dapper": "1.50.0-beta8",
-    "Newtonsoft.Json": "8.0.2",
-    "Quartz": "3.0.0-alpha2",
-    "Microsoft.Extensions.Configuration": "1.0.0-rc1-final",
-    "Microsoft.Extensions.Configuration.Json": "1.0.0-rc1-final",
-    "Microsoft.Extensions.Configuration.CommandLine": "1.0.0-rc1-final",
-    "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.0.0-rc1-final",
-    "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc1-final"
-  }
+  "licenseUrl": "",
+  "projectUrl": "",
+  "tags": [ "" ],
+  "version": "1.0.0-*"
 }
