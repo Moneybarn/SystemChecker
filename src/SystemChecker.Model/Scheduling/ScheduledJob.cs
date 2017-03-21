@@ -56,7 +56,8 @@ namespace SystemChecker.Model.Scheduling
                         Result = -99,
                         RunData = JsonConvert.SerializeObject(new
                         {
-                            Exception = e
+                            Exception = e.Message,
+                            StackTrace = e.StackTrace
                         })
                     };
                 }
