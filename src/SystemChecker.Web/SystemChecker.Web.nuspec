@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>systemchecker.web</id>
+    <version>$version$</version>
+    <authors>Matt Jeanes</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>SystemChecker Web Admin Interface</description>
+    <releaseNotes />
+  </metadata>
+</package>

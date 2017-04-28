@@ -26,6 +26,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SystemChecker.EmailCheckers
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SystemChecker.FileSystem", "src\SystemChecker.FileSystem\SystemChecker.FileSystem.csproj", "{D1551076-8050-43B9-A4CF-F307EF5E8202}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SystemChecker.Web", "src\SystemChecker.Web\SystemChecker.Web.csproj", "{0EEB478F-2233-45B0-B48A-25FFD3A8D6CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -62,6 +64,10 @@ Global
 		{D1551076-8050-43B9-A4CF-F307EF5E8202}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1551076-8050-43B9-A4CF-F307EF5E8202}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1551076-8050-43B9-A4CF-F307EF5E8202}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EEB478F-2233-45B0-B48A-25FFD3A8D6CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EEB478F-2233-45B0-B48A-25FFD3A8D6CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EEB478F-2233-45B0-B48A-25FFD3A8D6CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EEB478F-2233-45B0-B48A-25FFD3A8D6CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,5 +79,6 @@ Global
 		{276A2C6B-C4FD-4F46-AC14-9FAB4E616CAA} = {68F1D712-A837-4D77-B185-E2CC4EA4E421}
 		{23E01237-A1CB-4EAB-A672-877AE4F397EC} = {68F1D712-A837-4D77-B185-E2CC4EA4E421}
 		{D1551076-8050-43B9-A4CF-F307EF5E8202} = {68F1D712-A837-4D77-B185-E2CC4EA4E421}
+		{0EEB478F-2233-45B0-B48A-25FFD3A8D6CD} = {68F1D712-A837-4D77-B185-E2CC4EA4E421}
 	EndGlobalSection
 EndGlobal
