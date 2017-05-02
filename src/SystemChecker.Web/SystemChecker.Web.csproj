@@ -19,6 +19,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="wwwroot\**" />
-  </ItemGroup>  
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Web.Release.config">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   
 </Project>
